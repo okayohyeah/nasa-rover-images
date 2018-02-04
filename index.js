@@ -1,3 +1,5 @@
+
+
 var cameras_by_rovers = {
 
 	curiosity: [
@@ -145,6 +147,8 @@ function getUserChoice() {
 			if (obj.photos.length === 0) {
 				document.getElementById("message").innerText = "Sorry, the " + user_rover.toUpperCase() + " did not take any pictures with the " + camera_full_name.toUpperCase() + " on Martian sol day " + user_sol +".";
 			} else {
+        //clear message
+        document.getElementById("message").innerText = "";
 
 				// Find first photo's image source from response
 				image_source = obj.photos[0].img_src;
